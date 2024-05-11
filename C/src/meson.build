@@ -1,1 +1,4 @@
-executable('dm', 'main.c')
+dm_sources = files('''
+        propositions.c
+        dm.c
+'''.split())
