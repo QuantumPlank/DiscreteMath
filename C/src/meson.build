@@ -1,0 +1,1 @@
+executable('dm', 'main.c')
