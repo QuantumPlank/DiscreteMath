@@ -1,8 +1,8 @@
-#include"propositions.h"
+#include"logic-operators.h"
 #include<stdbool.h>
 
-bool conjunction(bool p, bool q) {
-    if(p && q) {
+bool conjunction(bool p, bool q){
+    if(p && q){
         return true;
     } 
     else {
@@ -10,8 +10,8 @@ bool conjunction(bool p, bool q) {
     }
 }
 
-bool disjunction(bool p, bool q) {
-    if(p || q) {
+bool disjunction(bool p, bool q){
+    if(p || q){
         return true;
     } 
     else {
@@ -19,8 +19,8 @@ bool disjunction(bool p, bool q) {
     }
 }
 
-bool exclusiveor(bool p, bool q) {
-    if((p && q) || (!p && !q)) {
+bool exclusiveor(bool p, bool q){
+    if((p && q) || (!p && !q)){
         return false;
     } 
     else {
@@ -28,8 +28,8 @@ bool exclusiveor(bool p, bool q) {
     }
 }
 
-bool conditional(bool p, bool q) {
-    if(p && (!q)) {
+bool conditional(bool p, bool q){
+    if(p && (!q)){
         return false;
     } 
     else {
@@ -37,8 +37,8 @@ bool conditional(bool p, bool q) {
     }
 }
 
-bool biconditional(bool p, bool q) {
-    if((p && q) || (!p && !q)) {
+bool biconditional(bool p, bool q){
+    if((p && q) || (!p && !q)){
         return true;
     } 
     else {

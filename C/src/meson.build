@@ -1,5 +1,5 @@
 dm_sources = files('''
-        propositions.c
+        logic-operators.c
         chapter1.c
         dm.c
 '''.split())

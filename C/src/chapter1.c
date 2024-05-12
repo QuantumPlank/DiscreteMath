@@ -1,10 +1,10 @@
 #include"chapter1.h"
-#include"propositions.h"
+#include"logic-operators.h"
 #include<stdio.h>
 #include<ctype.h>
 
 
-int c11(void){
+int ch1_cp1(void){
     bool p = false;
     bool q = false;
     char p_val;
@@ -15,10 +15,10 @@ int c11(void){
     printf("q: ");
     scanf(" %c", &q_val);
 
-    if(tolower(p_val) =='t') {
+    if(tolower(p_val) =='t'){
         p = true;
     }
-    if(tolower(q_val) =='t') {
+    if(tolower(q_val) =='t'){
         q = true;
     }
 
@@ -45,3 +45,6 @@ int c11(void){
     return 0;
 }
 
+int ch1_cp2(void){
+    return 0;
+}

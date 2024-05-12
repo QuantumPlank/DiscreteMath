@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<chapter1.h>
 
-int main(int argc, char *argv[]) {
-    c11();
+int main(int argc, char *argv[]){
+    ch1_cp1();
 }
