@@ -1,0 +1,1 @@
+void formatBitString(unsigned int bitStringSize, char* bitString);
