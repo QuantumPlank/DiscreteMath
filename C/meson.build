@@ -9,7 +9,7 @@ inc_dirs = include_directories('include')
 subdir('src')
 subdir('test')
 
-executable('dm', [dm_src, logic_operators_src],
+executable('dm', dm_src,
     include_directories: inc_dirs 
 )
 
