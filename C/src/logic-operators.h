@@ -3,14 +3,14 @@
 
 #include<stdbool.h>
 
-bool conjunction(bool p, bool q);
+int conjunction(int p, int q);
 
-bool disjunction(bool p, bool q);
+int disjunction(int p, int q);
 
-bool exclusiveor(bool p, bool q);
+int exclusiveor(int p, int q);
 
-bool conditional(bool p, bool q);
+int conditional(int p, int q);
 
-bool biconditional(bool p, bool q);
+int biconditional(int p, int q);
 
 #endif

@@ -1,7 +1,6 @@
 #include"logic-operators.h"
-#include<stdbool.h>
 
-bool conjunction(bool p, bool q){
+int conjunction(int p, int q){
     if(p && q){
         return true;
     } 
@@ -10,7 +9,7 @@ bool conjunction(bool p, bool q){
     }
 }
 
-bool disjunction(bool p, bool q){
+int disjunction(int p, int q){
     if(p || q){
         return true;
     } 
@@ -19,7 +18,7 @@ bool disjunction(bool p, bool q){
     }
 }
 
-bool exclusiveor(bool p, bool q){
+int exclusiveor(int p, int q){
     if((p && q) || (!p && !q)){
         return false;
     } 
@@ -28,7 +27,7 @@ bool exclusiveor(bool p, bool q){
     }
 }
 
-bool conditional(bool p, bool q){
+int conditional(int p, int q){
     if(p && (!q)){
         return false;
     } 
@@ -37,7 +36,7 @@ bool conditional(bool p, bool q){
     }
 }
 
-bool biconditional(bool p, bool q){
+int biconditional(int p, int q){
     if((p && q) || (!p && !q)){
         return true;
     } 
