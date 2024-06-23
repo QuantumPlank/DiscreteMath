@@ -1,12 +1,14 @@
 #include"chapter1.h"
 #include"logic-operators.h"
 #include"bitstrings.h"
+#include"propositions.h"
 #include<stdio.h>
 #include<ctype.h>
 
 #define numberOfBits 32
 #define bitStringSize (numberOfBits+1)
-#define propositionMaxLength 256
+#define PROPOSITION_LENGTH 20
+#define PROPOSITION_VARS 3
 
 /**
  * @brief Chapter: 1. Computer Projects: 1.
@@ -117,7 +119,7 @@ int ch1_cp2(void){
  * @return int 
  */
 int ch1_cp3(void){
-    char proposition[propositionMaxLength];
+    char proposition[PROPOSITION_LENGTH];
     printf("proposition: \n");
     scanf(" %s", proposition);
     printf("%s\n", proposition);
