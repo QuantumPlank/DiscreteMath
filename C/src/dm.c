@@ -2,5 +2,5 @@
 #include<chapter1.h>
 
 int main(int argc, char *argv[]){
-    ch1_cp2();
+    ch1_cp3();
 }

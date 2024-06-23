@@ -12,30 +12,40 @@ char bitStringD[testBitStringSize];
 
 void setUp(void) 
 {
-    strcpy(bitStringA, "abcdefgh\0");
-    strcpy(bitStringB, "00000000\0");
-    strcpy(bitStringC, "11111111\0");
-    strcpy(bitStringD, "10101010\0");
+
 }
 
 void tearDown(void)
 {
 }
 
-void test_formatBitString(void)
+void test_setBitString(void)
 {
-    formatBitString(testBitStringSize, bitStringA);
-    TEST_ASSERT_EQUAL_STRING("11111111", bitStringA);
-    formatBitString(testBitStringSize, bitStringB);
-    TEST_ASSERT_EQUAL_STRING("00000000", bitStringB);
-    formatBitString(testBitStringSize, bitStringC);
-    TEST_ASSERT_EQUAL_STRING("11111111", bitStringC);
-    formatBitString(testBitStringSize, bitStringD);
-    TEST_ASSERT_EQUAL_STRING("10101010", bitStringD);
+    
+}
+
+void test_getBitStringValue(void)
+{
+
+}
+
+void test_bitwiseAND(void)
+{
+    
+}
+
+void test_bitwiseOR(void)
+{
+    
+}
+
+void test_bitwiseXOR(void)
+{
+    
 }
 
 int main(void) {
     UNITY_BEGIN();
-    RUN_TEST(test_formatBitString);
+    //RUN_TEST(test_formatBitString);
     return UNITY_END();
 }

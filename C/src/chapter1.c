@@ -6,6 +6,7 @@
 
 #define numberOfBits 32
 #define bitStringSize (numberOfBits+1)
+#define propositionMaxLength 256
 
 /**
  * @brief Chapter: 1. Computer Projects: 1.
@@ -31,7 +32,6 @@ int ch1_cp1(void){
     if(tolower(q_val) =='t'){
         q = true;
     }
-
     printf("p & q = ");
     conjunction(p, q) ? printf("T") : printf("F");
     printf("\n");
@@ -65,22 +65,46 @@ int ch1_cp1(void){
 int ch1_cp2(void){ 
     char bitStringA[bitStringSize];
     char bitStringB[bitStringSize];
+    char bitStringC[bitStringSize];
+
+    unsigned int bitStringAValue;
+    unsigned int bitStringBValue;
+    unsigned int bitStringCValue;
 
     for(unsigned int i=0; i<bitStringSize-1; i++){
         bitStringA[i]='0';
         bitStringB[i]='0';
+        bitStringC[i]='0';
     }
-    bitStringA[bitStringSize]='\0';
-    bitStringB[bitStringSize]='\0';
+    bitStringA[bitStringSize-1]='\0';
+    bitStringB[bitStringSize-1]='\0';
+    bitStringC[bitStringSize-1]='\0';
 
     printf("bit string A: ");
     scanf(" %s", bitStringA);
-    printf("%s\n", bitStringA);
-    printf("%d\n", getBitStringValue(bitStringSize, bitStringA));
+    bitStringAValue = getBitStringValue(bitStringSize, bitStringA);
+    printf("%u\n", bitStringAValue);
+    printf("bit string B: ");
+    scanf(" %s", bitStringB);
+    bitStringBValue = getBitStringValue(bitStringSize, bitStringB);
+    printf("%u\n", getBitStringValue(bitStringSize, bitStringB));
 
-    // printf("bit string B: ");
-    // scanf(" %s", bitStringB);
-    // printf("%s\n", bitStringB);
+    printf("bitwise AND:\t");
+    bitStringCValue = bitwiseAND(bitStringAValue, bitStringBValue);
+    setBitString(bitStringCValue, bitStringSize, bitStringC);
+    printf("%s\t", bitStringC);
+    printf("%u\n", bitStringCValue);
+    printf("bitwise OR:\t");
+    bitStringCValue = bitwiseOR(bitStringAValue, bitStringBValue);
+    setBitString(bitStringCValue, bitStringSize, bitStringC);
+    printf("%s\t", bitStringC);
+    printf("%u\n", bitStringCValue);
+    printf("bitwise XOR:\t");
+    bitStringCValue = bitwiseXOR(bitStringAValue, bitStringBValue);
+    setBitString(bitStringCValue, bitStringSize, bitStringC);
+    printf("%s\t", bitStringC);
+    printf("%u\n", bitStringCValue);
+
     return 0;
 }
 
@@ -93,6 +117,11 @@ int ch1_cp2(void){
  * @return int 
  */
 int ch1_cp3(void){
+    char proposition[propositionMaxLength];
+    printf("proposition: \n");
+    scanf(" %s", proposition);
+    printf("%s\n", proposition);
+
     return 0;
 } 
 
@@ -123,3 +152,8 @@ int ch1_cp5(void);
  * @return int 
  */
 int ch1_cp6(void);
+
+
+int ch1_ce1(void){
+    
+}

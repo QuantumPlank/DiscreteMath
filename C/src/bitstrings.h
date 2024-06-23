@@ -1,7 +1,9 @@
 #ifndef BITSTRINGS_H
 #define BITSTRINGS_H
 
-unsigned int getBitStringValue(unsigned int bitStringSize, char* bitString);
+void setBitString(unsigned int bitStringValue, unsigned int bitStringSize, char* bitString);
+
+unsigned int getBitStringValue(unsigned int bitStringSize, const char* bitString);
 
 unsigned int bitwiseAND(unsigned int bitStringA, unsigned int bitStringB);
 
