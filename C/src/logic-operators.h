@@ -1,7 +1,5 @@
-#ifndef PROPOSITIONS_H
-#define PROPOSITIONS_H
-
-#include<stdbool.h>
+#ifndef LOGICOPERATORS_H
+#define LOGICOPERATORS_H
 
 int conjunction(int p, int q);
 

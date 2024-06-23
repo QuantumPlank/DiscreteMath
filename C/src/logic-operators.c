@@ -9,10 +9,10 @@
  */
 int conjunction(int p, int q){
     if(p && q){
-        return true;
+        return 1;
     } 
     else {
-        return false;
+        return 0;
     }
 }
 
@@ -25,10 +25,10 @@ int conjunction(int p, int q){
  */
 int disjunction(int p, int q){
     if(p || q){
-        return true;
+        return 1;
     } 
     else {
-        return false;
+        return 0;
     }
 }
 
@@ -41,10 +41,10 @@ int disjunction(int p, int q){
  */
 int exclusiveor(int p, int q){
     if((p && q) || (!p && !q)){
-        return false;
+        return 0;
     } 
     else {
-        return true;
+        return 1;
     }
 }
 
@@ -57,10 +57,10 @@ int exclusiveor(int p, int q){
  */
 int conditional(int p, int q){
     if(p && (!q)){
-        return false;
+        return 0;
     } 
     else {
-        return true;
+        return 1;
     }
 }
 
@@ -73,9 +73,9 @@ int conditional(int p, int q){
  */
 int biconditional(int p, int q){
     if((p && q) || (!p && !q)){
-        return true;
+        return 1;
     } 
     else {
-        return false;
+        return 0;
     }
 }

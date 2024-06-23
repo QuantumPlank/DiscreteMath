@@ -16,8 +16,8 @@
  * @return int 
  */
 int ch1_cp1(void){
-    int p = false;
-    int q = false;
+    int p = 0;
+    int q = 0;
     char p_val;
     char q_val;
 
@@ -27,10 +27,10 @@ int ch1_cp1(void){
     scanf(" %c", &q_val);
 
     if(tolower(p_val) =='t'){
-        p = true;
+        p = 1;
     }
     if(tolower(q_val) =='t'){
-        q = true;
+        q = 1;
     }
     printf("p & q = ");
     conjunction(p, q) ? printf("T") : printf("F");
@@ -152,8 +152,3 @@ int ch1_cp5(void);
  * @return int 
  */
 int ch1_cp6(void);
-
-
-int ch1_ce1(void){
-    
-}

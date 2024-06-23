@@ -11,42 +11,42 @@ void tearDown(void)
 
 void test_conjunction(void)
 {
-  TEST_ASSERT_TRUE(conjunction(true, true));
-  TEST_ASSERT_FALSE(conjunction(true,false));
-  TEST_ASSERT_FALSE(conjunction(false,true));
-  TEST_ASSERT_FALSE(conjunction(false,false));
+  TEST_ASSERT_TRUE(conjunction(1, 1));
+  TEST_ASSERT_FALSE(conjunction(1,0));
+  TEST_ASSERT_FALSE(conjunction(0,1));
+  TEST_ASSERT_FALSE(conjunction(0,0));
 }
 
 void test_disjunction(void)
 {
-  TEST_ASSERT_TRUE(disjunction(true, true));
-  TEST_ASSERT_TRUE(disjunction(true, false));
-  TEST_ASSERT_TRUE(disjunction(false, true));
-  TEST_ASSERT_FALSE(disjunction(false, false));
+  TEST_ASSERT_TRUE(disjunction(1, 1));
+  TEST_ASSERT_TRUE(disjunction(1, 0));
+  TEST_ASSERT_TRUE(disjunction(0, 1));
+  TEST_ASSERT_FALSE(disjunction(0, 0));
 }
 
 void test_exclusiveor(void)
 {
-  TEST_ASSERT_FALSE(exclusiveor(true, true));
-  TEST_ASSERT_TRUE(exclusiveor(true, false));
-  TEST_ASSERT_TRUE(exclusiveor(false, true));
-  TEST_ASSERT_FALSE(exclusiveor(false, false));
+  TEST_ASSERT_FALSE(exclusiveor(1, 1));
+  TEST_ASSERT_TRUE(exclusiveor(1, 0));
+  TEST_ASSERT_TRUE(exclusiveor(0, 1));
+  TEST_ASSERT_FALSE(exclusiveor(0, 0));
 }
 
 void test_conditional(void)
 {
-  TEST_ASSERT_TRUE(conditional(true, true));
-  TEST_ASSERT_FALSE(conditional(true, false));
-  TEST_ASSERT_TRUE(conditional(false, true));
-  TEST_ASSERT_TRUE(conditional(false, false));
+  TEST_ASSERT_TRUE(conditional(1, 1));
+  TEST_ASSERT_FALSE(conditional(1, 0));
+  TEST_ASSERT_TRUE(conditional(0, 1));
+  TEST_ASSERT_TRUE(conditional(0, 0));
 }
 
 void test_biconditional(void)
 {
-  TEST_ASSERT_TRUE(biconditional(true, true));
-  TEST_ASSERT_FALSE(biconditional(true, false));
-  TEST_ASSERT_FALSE(biconditional(false, true));
-  TEST_ASSERT_TRUE(biconditional(false, false));
+  TEST_ASSERT_TRUE(biconditional(1, 1));
+  TEST_ASSERT_FALSE(biconditional(1, 0));
+  TEST_ASSERT_FALSE(biconditional(0, 1));
+  TEST_ASSERT_TRUE(biconditional(0, 0));
 }
 
 int main(void) {
